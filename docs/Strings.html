@@ -1,0 +1,743 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Strings in Python &#8212; Week 2 Quiz</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Conditionals in Python" href="Conditionals.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/ubbull.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Week 2 Quiz</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to my Quiz 2 Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Functions.html">
+   Functions in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Conditionals.html">
+   Conditionals in Python
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Strings in Python
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FStrings.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/Strings.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-the-meaning-of-the-and-operators-for-strings-give-example-of-each">
+   <em>
+    1. What is the meaning of the + and * operators for strings? Give example of each.
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-does-the-length-of-an-empty-string-and-how-can-you-determine-that">
+   <em>
+    2. What does the length of an empty string and how can you determine that?
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-convert-an-int-and-float-to-string">
+   <em>
+    3. How to convert an int and float to string?
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-the-different-between-x-and-y-in-x-3-14-and-y-3-14">
+   <em>
+    4. What is the different between x and y in x = ‘3.14’ and y = 3.14?
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-the-value-of-var3-in-the-following-lines-of-code">
+   <em>
+    5. What is the value of var3 in the following lines of code?
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#when-using-the-oldest-string-method-how-can-you-concatenate-a-string-and-a-number-give-an-example">
+   <em>
+    6. When using the oldest string method, how can you concatenate a string and a number? Give an example
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#we-covered-five-special-characters-what-is-the-purpose-of-special-characters-and-how-do-you-use-them-give-one-example-of-a-special-character">
+   <em>
+    7. We covered five special characters. What is the purpose of special characters and how do you use them? Give one example of a special character.
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#we-covered-the-concept-of-creating-string-templates-what-is-a-string-template-and-how-are-they-used-give-an-example">
+   <em>
+    8. We covered the concept of creating string templates. What is a string template and how are they used? Give an example.
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-are-indices-used-with-the-newer-methods-give-an-example">
+   <em>
+    9. How are indices used with the newer methods? Give an example
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#string-formatting-allows-you-to-do-at-least-five-things-these-string-format-specifiers-come-after-a-colon-explain-each-of-the-following-using-f-string-examples">
+   <em>
+    10. String-formatting allows you to do at least five things. These string-format specifiers come after a colon. Explain each of the following using f-string examples.
+   </em>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#specify-width">
+     1. specify width
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#align-data-to-left-right-or-center">
+     2. align data to left, right, or center
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#specify-padding-character-when-specified-width-is-greater-than-the-width-of-the-string-number-being-used-make-sure-to-explain-the-default-padding-character-how-can-you-print-0012300-given-x-123-where-do-the-padding-characters-appear-with-respect-to-the-above-two-things">
+     3. specify padding character when specified width is greater than the width of the string/number being used; make sure to explain the default padding character; How can you print 0012300 given x = 123? Where do the padding characters appear with respect to the above two things?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#specify-precision-for-floating-values-where-is-this-put-in-relation-to-the-other-string-specifiers-how-can-you-print-3-14000000-10-width-given-pi-3-1415">
+     4. specify precision for floating values; where is this put in relation to the other string specifiers? How can you print ‘3.14000000’ (10 width) given ‘PI = 3.1415’?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-commas-to-numbers-for-easier-viewing-with-respect-to-the-other-specifiers-where-does-this-come-how-would-you-print-123-456-00-given-x-123456-width-is-20">
+     5. add commas to numbers for easier viewing; with respect to the other specifiers, where does this come? How would you print —–123,456.00—–, given x = 123456 - width is 20.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#explain-what-the-strip-method-does">
+   <em>
+    11. Explain what the .strip() method does?
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-the-purpose-of-the-in-operator-for-strings">
+   <em>
+    12. What is the purpose of the in operator for strings?
+   </em>
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Strings in Python</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-the-meaning-of-the-and-operators-for-strings-give-example-of-each">
+   <em>
+    1. What is the meaning of the + and * operators for strings? Give example of each.
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-does-the-length-of-an-empty-string-and-how-can-you-determine-that">
+   <em>
+    2. What does the length of an empty string and how can you determine that?
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-convert-an-int-and-float-to-string">
+   <em>
+    3. How to convert an int and float to string?
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-the-different-between-x-and-y-in-x-3-14-and-y-3-14">
+   <em>
+    4. What is the different between x and y in x = ‘3.14’ and y = 3.14?
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-the-value-of-var3-in-the-following-lines-of-code">
+   <em>
+    5. What is the value of var3 in the following lines of code?
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#when-using-the-oldest-string-method-how-can-you-concatenate-a-string-and-a-number-give-an-example">
+   <em>
+    6. When using the oldest string method, how can you concatenate a string and a number? Give an example
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#we-covered-five-special-characters-what-is-the-purpose-of-special-characters-and-how-do-you-use-them-give-one-example-of-a-special-character">
+   <em>
+    7. We covered five special characters. What is the purpose of special characters and how do you use them? Give one example of a special character.
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#we-covered-the-concept-of-creating-string-templates-what-is-a-string-template-and-how-are-they-used-give-an-example">
+   <em>
+    8. We covered the concept of creating string templates. What is a string template and how are they used? Give an example.
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-are-indices-used-with-the-newer-methods-give-an-example">
+   <em>
+    9. How are indices used with the newer methods? Give an example
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#string-formatting-allows-you-to-do-at-least-five-things-these-string-format-specifiers-come-after-a-colon-explain-each-of-the-following-using-f-string-examples">
+   <em>
+    10. String-formatting allows you to do at least five things. These string-format specifiers come after a colon. Explain each of the following using f-string examples.
+   </em>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#specify-width">
+     1. specify width
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#align-data-to-left-right-or-center">
+     2. align data to left, right, or center
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#specify-padding-character-when-specified-width-is-greater-than-the-width-of-the-string-number-being-used-make-sure-to-explain-the-default-padding-character-how-can-you-print-0012300-given-x-123-where-do-the-padding-characters-appear-with-respect-to-the-above-two-things">
+     3. specify padding character when specified width is greater than the width of the string/number being used; make sure to explain the default padding character; How can you print 0012300 given x = 123? Where do the padding characters appear with respect to the above two things?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#specify-precision-for-floating-values-where-is-this-put-in-relation-to-the-other-string-specifiers-how-can-you-print-3-14000000-10-width-given-pi-3-1415">
+     4. specify precision for floating values; where is this put in relation to the other string specifiers? How can you print ‘3.14000000’ (10 width) given ‘PI = 3.1415’?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-commas-to-numbers-for-easier-viewing-with-respect-to-the-other-specifiers-where-does-this-come-how-would-you-print-123-456-00-given-x-123456-width-is-20">
+     5. add commas to numbers for easier viewing; with respect to the other specifiers, where does this come? How would you print —–123,456.00—–, given x = 123456 - width is 20.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#explain-what-the-strip-method-does">
+   <em>
+    11. Explain what the .strip() method does?
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-the-purpose-of-the-in-operator-for-strings">
+   <em>
+    12. What is the purpose of the in operator for strings?
+   </em>
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="strings-in-python">
+<h1>Strings in Python<a class="headerlink" href="#strings-in-python" title="Permalink to this headline">#</a></h1>
+<section id="what-is-the-meaning-of-the-and-operators-for-strings-give-example-of-each">
+<h2><em>1. What is the meaning of the + and * operators for strings? Give example of each.</em><a class="headerlink" href="#what-is-the-meaning-of-the-and-operators-for-strings-give-example-of-each" title="Permalink to this headline">#</a></h2>
+<p>+ can add strings, but not str and type float or int <br>
+* – to repeat a string<br></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;str&#39;</span> <span class="o">+</span> <span class="s1">&#39;ing&#39;</span>
+<span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;Ha&#39;</span> <span class="o">*</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</section>
+<section id="what-does-the-length-of-an-empty-string-and-how-can-you-determine-that">
+<h2><em>2. What does the length of an empty string and how can you determine that?</em><a class="headerlink" href="#what-does-the-length-of-an-empty-string-and-how-can-you-determine-that" title="Permalink to this headline">#</a></h2>
+<p>the length of an empty string is 0</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="how-to-convert-an-int-and-float-to-string">
+<h2><em>3. How to convert an int and float to string?</em><a class="headerlink" href="#how-to-convert-an-int-and-float-to-string" title="Permalink to this headline">#</a></h2>
+<p>It’s simple! just use the str() function.</p>
+</section>
+<section id="what-is-the-different-between-x-and-y-in-x-3-14-and-y-3-14">
+<h2><em>4. What is the different between x and y in x = ‘3.14’ and y = 3.14?</em><a class="headerlink" href="#what-is-the-different-between-x-and-y-in-x-3-14-and-y-3-14" title="Permalink to this headline">#</a></h2>
+<p>y is of type float, and x is type string. You can perform mathematical operations with y, and with x you can perform string manipulations such as + and * with other strings.</p>
+</section>
+<section id="what-is-the-value-of-var3-in-the-following-lines-of-code">
+<h2><em>5. What is the value of var3 in the following lines of code?</em><a class="headerlink" href="#what-is-the-value-of-var3-in-the-following-lines-of-code" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">var1</span> <span class="o">=</span> <span class="s1">&#39;Na&#39;</span>
+<span class="n">var2</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">var3</span> <span class="o">=</span> <span class="n">var1</span> <span class="o">+</span> <span class="n">var2</span>
+<span class="n">returns</span> <span class="ne">TypeError</span><span class="p">:</span> <span class="n">can</span> <span class="n">only</span> <span class="n">concatenate</span> <span class="nb">str</span> <span class="p">(</span><span class="ow">not</span> <span class="s2">&quot;int&quot;</span><span class="p">)</span> <span class="n">to</span> <span class="nb">str</span>
+</pre></div>
+</div>
+</section>
+<section id="when-using-the-oldest-string-method-how-can-you-concatenate-a-string-and-a-number-give-an-example">
+<h2><em>6. When using the oldest string method, how can you concatenate a string and a number? Give an example</em><a class="headerlink" href="#when-using-the-oldest-string-method-how-can-you-concatenate-a-string-and-a-number-give-an-example" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">PI</span> <span class="o">=</span> <span class="mf">3.14159265359</span> 
+<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;PI&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> is </span><span class="si">%.2f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">PI</span><span class="p">))</span> 
+</pre></div>
+</div>
+</section>
+<section id="we-covered-five-special-characters-what-is-the-purpose-of-special-characters-and-how-do-you-use-them-give-one-example-of-a-special-character">
+<h2><em>7. We covered five special characters. What is the purpose of special characters and how do you use them? Give one example of a special character.</em><a class="headerlink" href="#we-covered-five-special-characters-what-is-the-purpose-of-special-characters-and-how-do-you-use-them-give-one-example-of-a-special-character" title="Permalink to this headline">#</a></h2>
+<p>Special characters are characters that envoke a syntax in python but can also be used in strings.
+Ex. if you wanted to print ‘I won’t be “home” for dinner’ because (’ and “) are special characters you would have to print(‘I won't be &quot;home&quot; for dinner)</p>
+</section>
+<section id="we-covered-the-concept-of-creating-string-templates-what-is-a-string-template-and-how-are-they-used-give-an-example">
+<h2><em>8. We covered the concept of creating string templates. What is a string template and how are they used? Give an example.</em><a class="headerlink" href="#we-covered-the-concept-of-creating-string-templates-what-is-a-string-template-and-how-are-they-used-give-an-example" title="Permalink to this headline">#</a></h2>
+<p>A string template tells python to format a string variable a certain way. In the example below we are telling str_template to accept to values and place a colon after the first.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">str_template</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">: </span><span class="si">{}</span><span class="s1">&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">str_template</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">2324</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<section id="how-are-indices-used-with-the-newer-methods-give-an-example">
+<h2><em>9. How are indices used with the newer methods? Give an example</em><a class="headerlink" href="#how-are-indices-used-with-the-newer-methods-give-an-example" title="Permalink to this headline">#</a></h2>
+<p>Indices in f strings are very easy to use, where if you want to swap the order all you have to do is swap the variable call.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f_string</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;The course number is </span><span class="si">{</span><span class="n">course_number</span><span class="si">}</span><span class="s1">. It has </span><span class="si">{</span><span class="n">class_size</span><span class="si">}</span><span class="s1"> students.&#39;</span>
+<span class="n">f_string</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;The course number is </span><span class="si">{</span><span class="n">class_size</span><span class="si">}</span><span class="s1">. It has </span><span class="si">{</span><span class="n">course_number</span><span class="si">}</span><span class="s1"> students.&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="string-formatting-allows-you-to-do-at-least-five-things-these-string-format-specifiers-come-after-a-colon-explain-each-of-the-following-using-f-string-examples">
+<h2><em>10. String-formatting allows you to do at least five things. These string-format specifiers come after a colon. Explain each of the following using f-string examples.</em><a class="headerlink" href="#string-formatting-allows-you-to-do-at-least-five-things-these-string-format-specifiers-come-after-a-colon-explain-each-of-the-following-using-f-string-examples" title="Permalink to this headline">#</a></h2>
+<section id="specify-width">
+<h3>1. specify width<a class="headerlink" href="#specify-width" title="Permalink to this headline">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;Hey&#39;</span>
+<span class="n">f_str</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;This variable has up to ten spaces </span><span class="si">{</span><span class="n">variable</span><span class="si">:</span><span class="s1">10</span><span class="si">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="align-data-to-left-right-or-center">
+<h3>2. align data to left, right, or center<a class="headerlink" href="#align-data-to-left-right-or-center" title="Permalink to this headline">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="s1">&#39;Hey&#39;</span>
+<span class="n">left</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">var</span><span class="si">:</span><span class="s1">&lt;10</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="n">right</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">var</span><span class="si">:</span><span class="s1">&gt;10</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="n">middle</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">var</span><span class="si">:</span><span class="s1">^10</span><span class="si">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="specify-padding-character-when-specified-width-is-greater-than-the-width-of-the-string-number-being-used-make-sure-to-explain-the-default-padding-character-how-can-you-print-0012300-given-x-123-where-do-the-padding-characters-appear-with-respect-to-the-above-two-things">
+<h3>3. specify padding character when specified width is greater than the width of the string/number being used; make sure to explain the default padding character; How can you print 0012300 given x = 123? Where do the padding characters appear with respect to the above two things?<a class="headerlink" href="#specify-padding-character-when-specified-width-is-greater-than-the-width-of-the-string-number-being-used-make-sure-to-explain-the-default-padding-character-how-can-you-print-0012300-given-x-123-where-do-the-padding-characters-appear-with-respect-to-the-above-two-things" title="Permalink to this headline">#</a></h3>
+<p>The defaul padding character is a space in python. If you pad a variable with length 3 by 10, there will be 7 spaces to the right by default. The example shows how you can pad with zeros left aligned and middle aligned.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="mi">123</span>
+<span class="n">left</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">var</span><span class="si">:</span><span class="s1">&lt;010</span><span class="si">}</span><span class="s1">&#39;</span> <span class="c1"># padded with zeros to the right</span>
+<span class="n">middle</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">var</span><span class="si">:</span><span class="s1">^010</span><span class="si">}</span><span class="s1"> # Middle padded with zeros</span>
+</pre></div>
+</div>
+</section>
+<section id="specify-precision-for-floating-values-where-is-this-put-in-relation-to-the-other-string-specifiers-how-can-you-print-3-14000000-10-width-given-pi-3-1415">
+<h3>4. specify precision for floating values; where is this put in relation to the other string specifiers? How can you print ‘3.14000000’ (10 width) given ‘PI = 3.1415’?<a class="headerlink" href="#specify-precision-for-floating-values-where-is-this-put-in-relation-to-the-other-string-specifiers-how-can-you-print-3-14000000-10-width-given-pi-3-1415" title="Permalink to this headline">#</a></h3>
+<p>Precision for floating values can be specified within an f string.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">PI</span> <span class="o">=</span> <span class="mf">3.1415</span>
+<span class="n">PI2</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">PI</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">PI2</span><span class="si">:</span><span class="s2">&lt;010</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="add-commas-to-numbers-for-easier-viewing-with-respect-to-the-other-specifiers-where-does-this-come-how-would-you-print-123-456-00-given-x-123456-width-is-20">
+<h3>5. add commas to numbers for easier viewing; with respect to the other specifiers, where does this come? How would you print —–123,456.00—–, given x = 123456 - width is 20.<a class="headerlink" href="#add-commas-to-numbers-for-easier-viewing-with-respect-to-the-other-specifiers-where-does-this-come-how-would-you-print-123-456-00-given-x-123456-width-is-20" title="Permalink to this headline">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">123456</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s1">,.2f</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x1</span><span class="si">:</span><span class="s1">-^20</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="explain-what-the-strip-method-does">
+<h2><em>11. Explain what the .strip() method does?</em><a class="headerlink" href="#explain-what-the-strip-method-does" title="Permalink to this headline">#</a></h2>
+<p>.strip() returns a copy of the string with leading and trailing whitespace removed.</p>
+</section>
+<section id="what-is-the-purpose-of-the-in-operator-for-strings">
+<h2><em>12. What is the purpose of the in operator for strings?</em><a class="headerlink" href="#what-is-the-purpose-of-the-in-operator-for-strings" title="Permalink to this headline">#</a></h2>
+<p>You can check is a sequence of characters is in a variable</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+<span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;Hello World&#39;</span>
+<span class="n">x</span> <span class="ow">in</span> <span class="n">y</span> <span class="ow">is</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="Conditionals.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Conditionals in Python</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By The Jupyter Book Community<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
