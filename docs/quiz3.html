@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Week 3 Quiz</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+/* From extension vscode.markdown-math */
+@font-face{font-family:KaTeX_AMS;font-style:normal;font-weight:400;src:url(fonts/KaTeX_AMS-Regular.woff2) format("woff2"),url(fonts/KaTeX_AMS-Regular.woff) format("woff"),url(fonts/KaTeX_AMS-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Caligraphic;font-style:normal;font-weight:700;src:url(fonts/KaTeX_Caligraphic-Bold.woff2) format("woff2"),url(fonts/KaTeX_Caligraphic-Bold.woff) format("woff"),url(fonts/KaTeX_Caligraphic-Bold.ttf) format("truetype")}@font-face{font-family:KaTeX_Caligraphic;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Caligraphic-Regular.woff2) format("woff2"),url(fonts/KaTeX_Caligraphic-Regular.woff) format("woff"),url(fonts/KaTeX_Caligraphic-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Fraktur;font-style:normal;font-weight:700;src:url(fonts/KaTeX_Fraktur-Bold.woff2) format("woff2"),url(fonts/KaTeX_Fraktur-Bold.woff) format("woff"),url(fonts/KaTeX_Fraktur-Bold.ttf) format("truetype")}@font-face{font-family:KaTeX_Fraktur;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Fraktur-Regular.woff2) format("woff2"),url(fonts/KaTeX_Fraktur-Regular.woff) format("woff"),url(fonts/KaTeX_Fraktur-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:normal;font-weight:700;src:url(fonts/KaTeX_Main-Bold.woff2) format("woff2"),url(fonts/KaTeX_Main-Bold.woff) format("woff"),url(fonts/KaTeX_Main-Bold.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:italic;font-weight:700;src:url(fonts/KaTeX_Main-BoldItalic.woff2) format("woff2"),url(fonts/KaTeX_Main-BoldItalic.woff) format("woff"),url(fonts/KaTeX_Main-BoldItalic.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:italic;font-weight:400;src:url(fonts/KaTeX_Main-Italic.woff2) format("woff2"),url(fonts/KaTeX_Main-Italic.woff) format("woff"),url(fonts/KaTeX_Main-Italic.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Main-Regular.woff2) format("woff2"),url(fonts/KaTeX_Main-Regular.woff) format("woff"),url(fonts/KaTeX_Main-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Math;font-style:italic;font-weight:700;src:url(fonts/KaTeX_Math-BoldItalic.woff2) format("woff2"),url(fonts/KaTeX_Math-BoldItalic.woff) format("woff"),url(fonts/KaTeX_Math-BoldItalic.ttf) format("truetype")}@font-face{font-family:KaTeX_Math;font-style:italic;font-weight:400;src:url(fonts/KaTeX_Math-Italic.woff2) format("woff2"),url(fonts/KaTeX_Math-Italic.woff) format("woff"),url(fonts/KaTeX_Math-Italic.ttf) format("truetype")}@font-face{font-family:"KaTeX_SansSerif";font-style:normal;font-weight:700;src:url(fonts/KaTeX_SansSerif-Bold.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Bold.woff) format("woff"),url(fonts/KaTeX_SansSerif-Bold.ttf) format("truetype")}@font-face{font-family:"KaTeX_SansSerif";font-style:italic;font-weight:400;src:url(fonts/KaTeX_SansSerif-Italic.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Italic.woff) format("woff"),url(fonts/KaTeX_SansSerif-Italic.ttf) format("truetype")}@font-face{font-family:"KaTeX_SansSerif";font-style:normal;font-weight:400;src:url(fonts/KaTeX_SansSerif-Regular.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Regular.woff) format("woff"),url(fonts/KaTeX_SansSerif-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Script;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Script-Regular.woff2) format("woff2"),url(fonts/KaTeX_Script-Regular.woff) format("woff"),url(fonts/KaTeX_Script-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Size1;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size1-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size1-Regular.woff) format("woff"),url(fonts/KaTeX_Size1-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Size2;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size2-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size2-Regular.woff) format("woff"),url(fonts/KaTeX_Size2-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Size3;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size3-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size3-Regular.woff) format("woff"),url(fonts/KaTeX_Size3-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Size4;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size4-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size4-Regular.woff) format("woff"),url(fonts/KaTeX_Size4-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Typewriter;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Typewriter-Regular.woff2) format("woff2"),url(fonts/KaTeX_Typewriter-Regular.woff) format("woff"),url(fonts/KaTeX_Typewriter-Regular.ttf) format("truetype")}.katex{text-rendering:auto;font:normal 1.21em KaTeX_Main,Times New Roman,serif;line-height:1.2;text-indent:0}.katex *{-ms-high-contrast-adjust:none!important;border-color:currentColor}.katex .katex-version:after{content:"0.13.24"}.katex .katex-mathml{clip:rect(1px,1px,1px,1px);border:0;height:1px;overflow:hidden;padding:0;position:absolute;width:1px}.katex .katex-html>.newline{display:block}.katex .base{position:relative;white-space:nowrap;width:-webkit-min-content;width:-moz-min-content;width:min-content}.katex .base,.katex .strut{display:inline-block}.katex .textbf{font-weight:700}.katex .textit{font-style:italic}.katex .textrm{font-family:KaTeX_Main}.katex .textsf{font-family:KaTeX_SansSerif}.katex .texttt{font-family:KaTeX_Typewriter}.katex .mathnormal{font-family:KaTeX_Math;font-style:italic}.katex .mathit{font-family:KaTeX_Main;font-style:italic}.katex .mathrm{font-style:normal}.katex .mathbf{font-family:KaTeX_Main;font-weight:700}.katex .boldsymbol{font-family:KaTeX_Math;font-style:italic;font-weight:700}.katex .amsrm,.katex .mathbb,.katex .textbb{font-family:KaTeX_AMS}.katex .mathcal{font-family:KaTeX_Caligraphic}.katex .mathfrak,.katex .textfrak{font-family:KaTeX_Fraktur}.katex .mathtt{font-family:KaTeX_Typewriter}.katex .mathscr,.katex .textscr{font-family:KaTeX_Script}.katex .mathsf,.katex .textsf{font-family:KaTeX_SansSerif}.katex .mathboldsf,.katex .textboldsf{font-family:KaTeX_SansSerif;font-weight:700}.katex .mathitsf,.katex .textitsf{font-family:KaTeX_SansSerif;font-style:italic}.katex .mainrm{font-family:KaTeX_Main;font-style:normal}.katex .vlist-t{border-collapse:collapse;display:inline-table;table-layout:fixed}.katex .vlist-r{display:table-row}.katex .vlist{display:table-cell;position:relative;vertical-align:bottom}.katex .vlist>span{display:block;height:0;position:relative}.katex .vlist>span>span{display:inline-block}.katex .vlist>span>.pstrut{overflow:hidden;width:0}.katex .vlist-t2{margin-right:-2px}.katex .vlist-s{display:table-cell;font-size:1px;min-width:2px;vertical-align:bottom;width:2px}.katex .vbox{align-items:baseline;display:inline-flex;flex-direction:column}.katex .hbox{width:100%}.katex .hbox,.katex .thinbox{display:inline-flex;flex-direction:row}.katex .thinbox{max-width:0;width:0}.katex .msupsub{text-align:left}.katex .mfrac>span>span{text-align:center}.katex .mfrac .frac-line{border-bottom-style:solid;display:inline-block;width:100%}.katex .hdashline,.katex .hline,.katex .mfrac .frac-line,.katex .overline .overline-line,.katex .rule,.katex .underline .underline-line{min-height:1px}.katex .mspace{display:inline-block}.katex .clap,.katex .llap,.katex .rlap{position:relative;width:0}.katex .clap>.inner,.katex .llap>.inner,.katex .rlap>.inner{position:absolute}.katex .clap>.fix,.katex .llap>.fix,.katex .rlap>.fix{display:inline-block}.katex .llap>.inner{right:0}.katex .clap>.inner,.katex .rlap>.inner{left:0}.katex .clap>.inner>span{margin-left:-50%;margin-right:50%}.katex .rule{border:0 solid;display:inline-block;position:relative}.katex .hline,.katex .overline .overline-line,.katex .underline .underline-line{border-bottom-style:solid;display:inline-block;width:100%}.katex .hdashline{border-bottom-style:dashed;display:inline-block;width:100%}.katex .sqrt>.root{margin-left:.27777778em;margin-right:-.55555556em}.katex .fontsize-ensurer.reset-size1.size1,.katex .sizing.reset-size1.size1{font-size:1em}.katex .fontsize-ensurer.reset-size1.size2,.katex .sizing.reset-size1.size2{font-size:1.2em}.katex .fontsize-ensurer.reset-size1.size3,.katex .sizing.reset-size1.size3{font-size:1.4em}.katex .fontsize-ensurer.reset-size1.size4,.katex .sizing.reset-size1.size4{font-size:1.6em}.katex .fontsize-ensurer.reset-size1.size5,.katex .sizing.reset-size1.size5{font-size:1.8em}.katex .fontsize-ensurer.reset-size1.size6,.katex .sizing.reset-size1.size6{font-size:2em}.katex .fontsize-ensurer.reset-size1.size7,.katex .sizing.reset-size1.size7{font-size:2.4em}.katex .fontsize-ensurer.reset-size1.size8,.katex .sizing.reset-size1.size8{font-size:2.88em}.katex .fontsize-ensurer.reset-size1.size9,.katex .sizing.reset-size1.size9{font-size:3.456em}.katex .fontsize-ensurer.reset-size1.size10,.katex .sizing.reset-size1.size10{font-size:4.148em}.katex .fontsize-ensurer.reset-size1.size11,.katex .sizing.reset-size1.size11{font-size:4.976em}.katex .fontsize-ensurer.reset-size2.size1,.katex .sizing.reset-size2.size1{font-size:.83333333em}.katex .fontsize-ensurer.reset-size2.size2,.katex .sizing.reset-size2.size2{font-size:1em}.katex .fontsize-ensurer.reset-size2.size3,.katex .sizing.reset-size2.size3{font-size:1.16666667em}.katex .fontsize-ensurer.reset-size2.size4,.katex .sizing.reset-size2.size4{font-size:1.33333333em}.katex .fontsize-ensurer.reset-size2.size5,.katex .sizing.reset-size2.size5{font-size:1.5em}.katex .fontsize-ensurer.reset-size2.size6,.katex .sizing.reset-size2.size6{font-size:1.66666667em}.katex .fontsize-ensurer.reset-size2.size7,.katex .sizing.reset-size2.size7{font-size:2em}.katex .fontsize-ensurer.reset-size2.size8,.katex .sizing.reset-size2.size8{font-size:2.4em}.katex .fontsize-ensurer.reset-size2.size9,.katex .sizing.reset-size2.size9{font-size:2.88em}.katex .fontsize-ensurer.reset-size2.size10,.katex .sizing.reset-size2.size10{font-size:3.45666667em}.katex .fontsize-ensurer.reset-size2.size11,.katex .sizing.reset-size2.size11{font-size:4.14666667em}.katex .fontsize-ensurer.reset-size3.size1,.katex .sizing.reset-size3.size1{font-size:.71428571em}.katex .fontsize-ensurer.reset-size3.size2,.katex .sizing.reset-size3.size2{font-size:.85714286em}.katex .fontsize-ensurer.reset-size3.size3,.katex .sizing.reset-size3.size3{font-size:1em}.katex .fontsize-ensurer.reset-size3.size4,.katex .sizing.reset-size3.size4{font-size:1.14285714em}.katex .fontsize-ensurer.reset-size3.size5,.katex .sizing.reset-size3.size5{font-size:1.28571429em}.katex .fontsize-ensurer.reset-size3.size6,.katex .sizing.reset-size3.size6{font-size:1.42857143em}.katex .fontsize-ensurer.reset-size3.size7,.katex .sizing.reset-size3.size7{font-size:1.71428571em}.katex .fontsize-ensurer.reset-size3.size8,.katex .sizing.reset-size3.size8{font-size:2.05714286em}.katex .fontsize-ensurer.reset-size3.size9,.katex .sizing.reset-size3.size9{font-size:2.46857143em}.katex .fontsize-ensurer.reset-size3.size10,.katex .sizing.reset-size3.size10{font-size:2.96285714em}.katex .fontsize-ensurer.reset-size3.size11,.katex .sizing.reset-size3.size11{font-size:3.55428571em}.katex .fontsize-ensurer.reset-size4.size1,.katex .sizing.reset-size4.size1{font-size:.625em}.katex .fontsize-ensurer.reset-size4.size2,.katex .sizing.reset-size4.size2{font-size:.75em}.katex .fontsize-ensurer.reset-size4.size3,.katex .sizing.reset-size4.size3{font-size:.875em}.katex .fontsize-ensurer.reset-size4.size4,.katex .sizing.reset-size4.size4{font-size:1em}.katex .fontsize-ensurer.reset-size4.size5,.katex .sizing.reset-size4.size5{font-size:1.125em}.katex .fontsize-ensurer.reset-size4.size6,.katex .sizing.reset-size4.size6{font-size:1.25em}.katex .fontsize-ensurer.reset-size4.size7,.katex .sizing.reset-size4.size7{font-size:1.5em}.katex .fontsize-ensurer.reset-size4.size8,.katex .sizing.reset-size4.size8{font-size:1.8em}.katex .fontsize-ensurer.reset-size4.size9,.katex .sizing.reset-size4.size9{font-size:2.16em}.katex .fontsize-ensurer.reset-size4.size10,.katex .sizing.reset-size4.size10{font-size:2.5925em}.katex .fontsize-ensurer.reset-size4.size11,.katex .sizing.reset-size4.size11{font-size:3.11em}.katex .fontsize-ensurer.reset-size5.size1,.katex .sizing.reset-size5.size1{font-size:.55555556em}.katex .fontsize-ensurer.reset-size5.size2,.katex .sizing.reset-size5.size2{font-size:.66666667em}.katex .fontsize-ensurer.reset-size5.size3,.katex .sizing.reset-size5.size3{font-size:.77777778em}.katex .fontsize-ensurer.reset-size5.size4,.katex .sizing.reset-size5.size4{font-size:.88888889em}.katex .fontsize-ensurer.reset-size5.size5,.katex .sizing.reset-size5.size5{font-size:1em}.katex .fontsize-ensurer.reset-size5.size6,.katex .sizing.reset-size5.size6{font-size:1.11111111em}.katex .fontsize-ensurer.reset-size5.size7,.katex .sizing.reset-size5.size7{font-size:1.33333333em}.katex .fontsize-ensurer.reset-size5.size8,.katex .sizing.reset-size5.size8{font-size:1.6em}.katex .fontsize-ensurer.reset-size5.size9,.katex .sizing.reset-size5.size9{font-size:1.92em}.katex .fontsize-ensurer.reset-size5.size10,.katex .sizing.reset-size5.size10{font-size:2.30444444em}.katex .fontsize-ensurer.reset-size5.size11,.katex .sizing.reset-size5.size11{font-size:2.76444444em}.katex .fontsize-ensurer.reset-size6.size1,.katex .sizing.reset-size6.size1{font-size:.5em}.katex .fontsize-ensurer.reset-size6.size2,.katex .sizing.reset-size6.size2{font-size:.6em}.katex .fontsize-ensurer.reset-size6.size3,.katex .sizing.reset-size6.size3{font-size:.7em}.katex .fontsize-ensurer.reset-size6.size4,.katex .sizing.reset-size6.size4{font-size:.8em}.katex .fontsize-ensurer.reset-size6.size5,.katex .sizing.reset-size6.size5{font-size:.9em}.katex .fontsize-ensurer.reset-size6.size6,.katex .sizing.reset-size6.size6{font-size:1em}.katex .fontsize-ensurer.reset-size6.size7,.katex .sizing.reset-size6.size7{font-size:1.2em}.katex .fontsize-ensurer.reset-size6.size8,.katex .sizing.reset-size6.size8{font-size:1.44em}.katex .fontsize-ensurer.reset-size6.size9,.katex .sizing.reset-size6.size9{font-size:1.728em}.katex .fontsize-ensurer.reset-size6.size10,.katex .sizing.reset-size6.size10{font-size:2.074em}.katex .fontsize-ensurer.reset-size6.size11,.katex .sizing.reset-size6.size11{font-size:2.488em}.katex .fontsize-ensurer.reset-size7.size1,.katex .sizing.reset-size7.size1{font-size:.41666667em}.katex .fontsize-ensurer.reset-size7.size2,.katex .sizing.reset-size7.size2{font-size:.5em}.katex .fontsize-ensurer.reset-size7.size3,.katex .sizing.reset-size7.size3{font-size:.58333333em}.katex .fontsize-ensurer.reset-size7.size4,.katex .sizing.reset-size7.size4{font-size:.66666667em}.katex .fontsize-ensurer.reset-size7.size5,.katex .sizing.reset-size7.size5{font-size:.75em}.katex .fontsize-ensurer.reset-size7.size6,.katex .sizing.reset-size7.size6{font-size:.83333333em}.katex .fontsize-ensurer.reset-size7.size7,.katex .sizing.reset-size7.size7{font-size:1em}.katex .fontsize-ensurer.reset-size7.size8,.katex .sizing.reset-size7.size8{font-size:1.2em}.katex .fontsize-ensurer.reset-size7.size9,.katex .sizing.reset-size7.size9{font-size:1.44em}.katex .fontsize-ensurer.reset-size7.size10,.katex .sizing.reset-size7.size10{font-size:1.72833333em}.katex .fontsize-ensurer.reset-size7.size11,.katex .sizing.reset-size7.size11{font-size:2.07333333em}.katex .fontsize-ensurer.reset-size8.size1,.katex .sizing.reset-size8.size1{font-size:.34722222em}.katex .fontsize-ensurer.reset-size8.size2,.katex .sizing.reset-size8.size2{font-size:.41666667em}.katex .fontsize-ensurer.reset-size8.size3,.katex .sizing.reset-size8.size3{font-size:.48611111em}.katex .fontsize-ensurer.reset-size8.size4,.katex .sizing.reset-size8.size4{font-size:.55555556em}.katex .fontsize-ensurer.reset-size8.size5,.katex .sizing.reset-size8.size5{font-size:.625em}.katex .fontsize-ensurer.reset-size8.size6,.katex .sizing.reset-size8.size6{font-size:.69444444em}.katex .fontsize-ensurer.reset-size8.size7,.katex .sizing.reset-size8.size7{font-size:.83333333em}.katex .fontsize-ensurer.reset-size8.size8,.katex .sizing.reset-size8.size8{font-size:1em}.katex .fontsize-ensurer.reset-size8.size9,.katex .sizing.reset-size8.size9{font-size:1.2em}.katex .fontsize-ensurer.reset-size8.size10,.katex .sizing.reset-size8.size10{font-size:1.44027778em}.katex .fontsize-ensurer.reset-size8.size11,.katex .sizing.reset-size8.size11{font-size:1.72777778em}.katex .fontsize-ensurer.reset-size9.size1,.katex .sizing.reset-size9.size1{font-size:.28935185em}.katex .fontsize-ensurer.reset-size9.size2,.katex .sizing.reset-size9.size2{font-size:.34722222em}.katex .fontsize-ensurer.reset-size9.size3,.katex .sizing.reset-size9.size3{font-size:.40509259em}.katex .fontsize-ensurer.reset-size9.size4,.katex .sizing.reset-size9.size4{font-size:.46296296em}.katex .fontsize-ensurer.reset-size9.size5,.katex .sizing.reset-size9.size5{font-size:.52083333em}.katex .fontsize-ensurer.reset-size9.size6,.katex .sizing.reset-size9.size6{font-size:.5787037em}.katex .fontsize-ensurer.reset-size9.size7,.katex .sizing.reset-size9.size7{font-size:.69444444em}.katex .fontsize-ensurer.reset-size9.size8,.katex .sizing.reset-size9.size8{font-size:.83333333em}.katex .fontsize-ensurer.reset-size9.size9,.katex .sizing.reset-size9.size9{font-size:1em}.katex .fontsize-ensurer.reset-size9.size10,.katex .sizing.reset-size9.size10{font-size:1.20023148em}.katex .fontsize-ensurer.reset-size9.size11,.katex .sizing.reset-size9.size11{font-size:1.43981481em}.katex .fontsize-ensurer.reset-size10.size1,.katex .sizing.reset-size10.size1{font-size:.24108004em}.katex .fontsize-ensurer.reset-size10.size2,.katex .sizing.reset-size10.size2{font-size:.28929605em}.katex .fontsize-ensurer.reset-size10.size3,.katex .sizing.reset-size10.size3{font-size:.33751205em}.katex .fontsize-ensurer.reset-size10.size4,.katex .sizing.reset-size10.size4{font-size:.38572806em}.katex .fontsize-ensurer.reset-size10.size5,.katex .sizing.reset-size10.size5{font-size:.43394407em}.katex .fontsize-ensurer.reset-size10.size6,.katex .sizing.reset-size10.size6{font-size:.48216008em}.katex .fontsize-ensurer.reset-size10.size7,.katex .sizing.reset-size10.size7{font-size:.57859209em}.katex .fontsize-ensurer.reset-size10.size8,.katex .sizing.reset-size10.size8{font-size:.69431051em}.katex .fontsize-ensurer.reset-size10.size9,.katex .sizing.reset-size10.size9{font-size:.83317261em}.katex .fontsize-ensurer.reset-size10.size10,.katex .sizing.reset-size10.size10{font-size:1em}.katex .fontsize-ensurer.reset-size10.size11,.katex .sizing.reset-size10.size11{font-size:1.19961427em}.katex .fontsize-ensurer.reset-size11.size1,.katex .sizing.reset-size11.size1{font-size:.20096463em}.katex .fontsize-ensurer.reset-size11.size2,.katex .sizing.reset-size11.size2{font-size:.24115756em}.katex .fontsize-ensurer.reset-size11.size3,.katex .sizing.reset-size11.size3{font-size:.28135048em}.katex .fontsize-ensurer.reset-size11.size4,.katex .sizing.reset-size11.size4{font-size:.32154341em}.katex .fontsize-ensurer.reset-size11.size5,.katex .sizing.reset-size11.size5{font-size:.36173633em}.katex .fontsize-ensurer.reset-size11.size6,.katex .sizing.reset-size11.size6{font-size:.40192926em}.katex .fontsize-ensurer.reset-size11.size7,.katex .sizing.reset-size11.size7{font-size:.48231511em}.katex .fontsize-ensurer.reset-size11.size8,.katex .sizing.reset-size11.size8{font-size:.57877814em}.katex .fontsize-ensurer.reset-size11.size9,.katex .sizing.reset-size11.size9{font-size:.69453376em}.katex .fontsize-ensurer.reset-size11.size10,.katex .sizing.reset-size11.size10{font-size:.83360129em}.katex .fontsize-ensurer.reset-size11.size11,.katex .sizing.reset-size11.size11{font-size:1em}.katex .delimsizing.size1{font-family:KaTeX_Size1}.katex .delimsizing.size2{font-family:KaTeX_Size2}.katex .delimsizing.size3{font-family:KaTeX_Size3}.katex .delimsizing.size4{font-family:KaTeX_Size4}.katex .delimsizing.mult .delim-size1>span{font-family:KaTeX_Size1}.katex .delimsizing.mult .delim-size4>span{font-family:KaTeX_Size4}.katex .nulldelimiter{display:inline-block;width:.12em}.katex .delimcenter,.katex .op-symbol{position:relative}.katex .op-symbol.small-op{font-family:KaTeX_Size1}.katex .op-symbol.large-op{font-family:KaTeX_Size2}.katex .accent>.vlist-t,.katex .op-limits>.vlist-t{text-align:center}.katex .accent .accent-body{position:relative}.katex .accent .accent-body:not(.accent-full){width:0}.katex .overlay{display:block}.katex .mtable .vertical-separator{display:inline-block;min-width:1px}.katex .mtable .arraycolsep{display:inline-block}.katex .mtable .col-align-c>.vlist-t{text-align:center}.katex .mtable .col-align-l>.vlist-t{text-align:left}.katex .mtable .col-align-r>.vlist-t{text-align:right}.katex .svg-align{text-align:left}.katex svg{fill:currentColor;stroke:currentColor;fill-rule:nonzero;fill-opacity:1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;display:block;height:inherit;position:absolute;width:100%}.katex svg path{stroke:none}.katex img{border-style:none;max-height:none;max-width:none;min-height:0;min-width:0}.katex .stretchy{display:block;overflow:hidden;position:relative;width:100%}.katex .stretchy:after,.katex .stretchy:before{content:""}.katex .hide-tail{overflow:hidden;position:relative;width:100%}.katex .halfarrow-left{left:0;overflow:hidden;position:absolute;width:50.2%}.katex .halfarrow-right{overflow:hidden;position:absolute;right:0;width:50.2%}.katex .brace-left{left:0;overflow:hidden;position:absolute;width:25.1%}.katex .brace-center{left:25%;overflow:hidden;position:absolute;width:50%}.katex .brace-right{overflow:hidden;position:absolute;right:0;width:25.1%}.katex .x-arrow-pad{padding:0 .5em}.katex .cd-arrow-pad{padding:0 .55556em 0 .27778em}.katex .mover,.katex .munder,.katex .x-arrow{text-align:center}.katex .boxpad{padding:0 .3em}.katex .fbox,.katex .fcolorbox{border:.04em solid;box-sizing:border-box}.katex .cancel-pad{padding:0 .2em}.katex .cancel-lap{margin-left:-.2em;margin-right:-.2em}.katex .sout{border-bottom-style:solid;border-bottom-width:.08em}.katex .angl{border-right:.049em solid;border-top:.049em solid;box-sizing:border-box;margin-right:.03889em}.katex .anglpad{padding:0 .03889em}.katex .eqn-num:before{content:"(" counter(katexEqnNo) ")";counter-increment:katexEqnNo}.katex .mml-eqn-num:before{content:"(" counter(mmlEqnNo) ")";counter-increment:mmlEqnNo}.katex .mtr-glue{width:50%}.katex .cd-vert-arrow{display:inline-block;position:relative}.katex .cd-label-left{display:inline-block;position:absolute;right:calc(50% + .3em);text-align:left}.katex .cd-label-right{display:inline-block;left:calc(50% + .3em);position:absolute;text-align:right}.katex-display{display:block;margin:1em 0;text-align:center}.katex-display>.katex{display:block;text-align:center;white-space:nowrap}.katex-display>.katex>.katex-html{display:block;position:relative}.katex-display>.katex>.katex-html>.tag{position:absolute;right:0}.katex-display.leqno>.katex>.katex-html>.tag{left:0;right:auto}.katex-display.fleqn>.katex{padding-left:2em;text-align:left}body{counter-reset:katexEqnNo mmlEqnNo}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.katex-error {
+	color: var(--vscode-editorError-foreground);
+}
+
+/* From extension ms-toolsai.jupyter */
+/* These classnames are inherited from bootstrap, but are present in most notebook renderers */
+
+.alert {
+    width: auto;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.alert > *:last-child {
+    margin-bottom: 0;
+}
+#preview > .alert:last-child {
+    /* Prevent this being set to zero by the default notebook stylesheet */
+    padding-bottom: 1em;
+}
+
+.alert-success {
+    /* Note there is no suitable color available, so we just copy "info" */
+    background-color: var(--theme-info-background);
+    color: var(--theme-info-foreground);
+}
+.alert-info {
+    background-color: var(--theme-info-background);
+    color: var(--theme-info-foreground);
+}
+.alert-warning {
+    background-color: var(--theme-warning-background);
+    color: var(--theme-warning-foreground);
+}
+.alert-danger {
+    background-color: var(--theme-error-background);
+    color: var(--theme-error-foreground);
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="week-3-quiz">Week 3 Quiz</h1>
+<h2 id="list-review">List Review</h2>
+<h3 id="1-can-the-elements-in-a-list-in-python-contain-different-data-types-or-only-one-data-type"><em>1. Can the elements in a list in Python contain different data types or only one data type?</em></h3>
+<p>Yes elements can contain different data types</p>
+<h3 id="2-when-will-the-max-min-and-sum-function-work-on-a-list-and-when-will-they-not-work"><em>2. When will the max, min, and sum function work on a list and when will they not work?</em></h3>
+<p>max(),min(), and sum(), all word on a list with int and/or float types. All 3 will fail if 1 or more elements are a string element.</p>
+<h3 id="3-how-do-the-all-and-any-functions-work"><em>3. How do the all and any functions work?</em></h3>
+<p>any() return True if the truthiness of any value is True in the list
+all() return True if the truthiness of all the values is True in the list</p>
+<h3 id="4-how-do-you-access-a-particular-element-in-a-list-what-does-it-mean-that-lists-in-python-are-0-indexed"><em>4. How do you access a particular element in a list? What does it mean that lists in Python are 0-indexed?</em></h3>
+<p>You can access a particular element in a list by using the '[]'. Zero indexed means that the first element is at index [0] of a list</p>
+<pre><code class="language-python"><div>lst = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]
+<span class="hljs-comment"># lst[0] = 1</span>
+</div></code></pre>
+<h3 id="5-explain-what-list-slicing-is-hint-explain-start-index-end-index-and-step-size-give-some-examples-to-clarify-this-concept-make-sure-to-explain-how-the-colon-works-you-can-have-start-index-and-no-end-index-you-can-have-end-index-but-no-start-index-you-can-have-both-start-and-end-index-you-can-have-no-start-index-but-end-index-and-step-size"><em>5. Explain what list slicing is? Hint: explain start index, end index, and step size. Give some examples to clarify this concept. Make sure to explain how the colon works. You can have start index and no end index; you can have end index, but no start index; you can have both start and end index; you can have no start index, but end index and step size.</em></h3>
+<p>List slicing is accessing only a part (a slice) of list. Using the [] to access an element, there are operators we can use to access parts of a list robustly. For a given list, you can slice with using [start:end:step] where <span style="color:orange">start</span> is the first element of the list you want to access (inclusive), and <span style="color:orange">end</span> is the last index (not inclusive) meaning that element specified in end will not be access. Lastly, <span style="color:orange">step</span> determines how many elements to skip from element to element from start to end. If no start is specified python begins at index 0, with no end specified python ends at the last index [-1], and if no step is specified the default step size = 1.</p>
+<pre><code class="language-python"><div>data_science_courses = [<span class="hljs-string">&#x27;EAS501&#x27;</span>,<span class="hljs-string">&#x27;EAS502&#x27;</span>,<span class="hljs-string">&#x27;EAS503&#x27;</span>,<span class="hljs-string">&#x27;EAS508&#x27;</span>]
+first_two_courses = data_science_courses[:<span class="hljs-number">2</span>] <span class="hljs-comment"># [&#x27;EAS501&#x27;,&#x27;EAS502]</span>
+last_two_courses = data_science_courses[<span class="hljs-number">2</span>:] <span class="hljs-comment"># [&#x27;EAS503&#x27;,&#x27;EAS508&#x27;]</span>
+steping_through = data_science_courses[<span class="hljs-number">1</span>:<span class="hljs-number">4</span>:<span class="hljs-number">2</span>] <span class="hljs-comment"># [&#x27;EAS502&#x27;, &#x27;EAS508&#x27;]</span>
+</div></code></pre>
+<h3 id="6-what-does-index--1-mean-how-can-you-reverse-a-list-using-it"><em>6. What does index -1 mean? How can you reverse a list using it?</em></h3>
+<p>[-1] indicates the last element of a list. You can reverse a list by accessing the last element over the length of a list and then appending that value to a new list.</p>
+<pre><code class="language-python"><div>forward = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>]
+backward = []
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(forward)):
+    backward.append(forward[<span class="hljs-built_in">len</span>(forward)- <span class="hljs-number">1</span> - i])
+<span class="hljs-built_in">print</span>(backward) <span class="hljs-comment"># [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]</span>
+</div></code></pre>
+<h3 id="7-what-are-two-ways-of-deleting-an-element-from-a-list-at-a-particular-index"><em>7. What are two ways of deleting an element from a list at a particular index?</em></h3>
+<p>You can delete an element using del and pop
+del list[index]
+list.pop(index)</p>
+<h3 id="8-what-is-the-meaning-of-the--operator-when-the-operands-are-a-list"><em>8. What is the meaning of the + operator when the operands are a list?</em></h3>
+<p>+ will concatenate the list to the right of the + to the list on the right</p>
+<pre><code class="language-python"><div>one,two = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>],[<span class="hljs-string">&#x27;A&#x27;</span>,<span class="hljs-string">&#x27;B&#x27;</span>,<span class="hljs-string">&#x27;C&#x27;</span>]
+three = one + two 
+<span class="hljs-built_in">print</span>(three) <span class="hljs-comment"># [1,2,3,&#x27;A&#x27;,&#x27;B&#x27;,&#x27;C&#x27;]</span>
+</div></code></pre>
+<h3 id="9-what-is-the-meaning-of-the--operator-on-a-list-give-an-example-of-how-you-can-use-it"><em>9. What is the meaning of the * operator on a list? Give an example of how you can use it?</em></h3>
+<p>* is the same for list as it is with strings, it will duplicate the list for as many times as it is multiplied by.</p>
+<pre><code class="language-python"><div>test = [<span class="hljs-number">90</span>,<span class="hljs-number">95</span>,<span class="hljs-number">100</span>]
+result = test * <span class="hljs-number">3</span> <span class="hljs-comment"># [90,95,100,90,95,100,90,95,100]</span>
+</div></code></pre>
+<h3 id="10-what-is-the-difference-between-sort-and-sorted"><em>10. What is the difference between sort and sorted?</em></h3>
+<p>sort() is a method and will sort the list in place, does not return anything
+sorted() is a function and will return a sorted list</p>
+<pre><code class="language-python"><div>backward = [<span class="hljs-number">10</span>,<span class="hljs-number">9</span>,<span class="hljs-number">8</span>,<span class="hljs-number">7</span>,<span class="hljs-number">6</span>,<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">3</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>]
+<span class="hljs-built_in">print</span>(backward.sort()) <span class="hljs-comment"># None</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-built_in">sorted</span>(backward)) <span class="hljs-comment"># [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span>
+</div></code></pre>
+<h3 id="11-will-the-index-method-on-a-list-return-all-the-indices-where-the-specified-value-occurs"><em>11. Will the index method on a list return all the indices where the specified value occurs?</em></h3>
+<p>No, index returns the position of first matching element</p>
+<h3 id="12-what-method-can-you-use-to-remove-the-last-element-from-a-list-and-also-get-that-value"><em>12. What method can you use to remove the last element from a list and also get that value?</em></h3>
+<p>pop()</p>
+<h3 id="13-is-it-possible-to-modify-a-tuple"><em>13. Is it possible to modify a tuple?</em></h3>
+<p>No</p>
+<h3 id="14-what-operator-can-be-used-to-check-if-an-element-exists-inside-a-sequence"><em>14. What operator can be used to check if an element exists inside a sequence?</em></h3>
+<p>in</p>
+<h3 id="15-what-is-the-significance-of-calling-a-list-and-string-a-sequence"><em>15. What is the significance of calling a list and string a sequence?</em></h3>
+<p>A list and string are sequences, meaning they are iterable objects that can be looped over and manipulated.</p>
+<h2 id="for-loop-review">For Loop Review</h2>
+<h3 id="1-explain-how-the-range-function-works"><em>1. Explain how the range function works</em></h3>
+<p>The range() function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and stops before a specified number. There are three input parameters to range(start,stop,step) <br></p>
+<ul>
+<li>start	Optional. An integer number specifying at which position to start. Default is 0 <br></li>
+<li>stop	Required. An integer number specifying at which position to stop (not included). <br></li>
+<li>step	Optional. An integer number specifying the incrementation. Default is 1 <br></li>
+</ul>
+<h3 id="2-if-you-want-to-loop-over-a-list-using-indices-how-can-you-do-that"><em>2. If you want to loop over a list using indices, how can you do that?</em></h3>
+<pre><code class="language-python"><div>lst = [<span class="hljs-string">&#x27;A&#x27;</span>,<span class="hljs-string">&#x27;B&#x27;</span>,<span class="hljs-string">&#x27;C&#x27;</span>]
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(lst)):
+    <span class="hljs-built_in">print</span>(lst[i],end=<span class="hljs-string">&#x27;,&#x27;</span>) <span class="hljs-comment"># A,B,C,</span>
+</div></code></pre>
+<h3 id="3-explain-what-the-enumerate-function-does"><em>3. Explain what the enumerate function does?</em></h3>
+<p>enumerate iterates over the index and values of a list</p>
+<pre><code class="language-python"><div>lst = [<span class="hljs-string">&#x27;A&#x27;</span>,<span class="hljs-string">&#x27;B&#x27;</span>,<span class="hljs-string">&#x27;C&#x27;</span>]
+<span class="hljs-keyword">for</span> index, element <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(lst):
+    <span class="hljs-built_in">print</span>(index,element)
+<span class="hljs-comment"># 0 A</span>
+<span class="hljs-comment"># 1 B</span>
+<span class="hljs-comment"># 2 C</span>
+</div></code></pre>
+<h3 id="4-if-you-want-to-simultaneously-access-two-or-more-lists-at-the-same-time-in-python-how-can-you-do-it"><em>4. If you want to simultaneously access two or more lists at the same time in Python, how can you do it?</em></h3>
+<p>you can use zip to access two or more lists.</p>
+<pre><code class="language-python"><div>abvs = [<span class="hljs-string">&#x27;NY&#x27;</span>,<span class="hljs-string">&#x27;PA&#x27;</span>,<span class="hljs-string">&#x27;CA&#x27;</span>]
+states = [<span class="hljs-string">&#x27;New York&#x27;</span>, <span class="hljs-string">&#x27;Pennslyvania&#x27;</span>, <span class="hljs-string">&#x27;California&#x27;</span>]
+<span class="hljs-keyword">for</span> abv, state <span class="hljs-keyword">in</span> <span class="hljs-built_in">zip</span>(abvs,states):
+    <span class="hljs-built_in">print</span>(abv,state)
+<span class="hljs-comment"># NY New York</span>
+<span class="hljs-comment"># PA Pennslyvania</span>
+<span class="hljs-comment"># CA California</span>
+</div></code></pre>
+<h3 id="5-explain-the-zip-function-how-many-lists-can-you-zip-up-what-happens-when-there-is-a-length-mismatch-between-lists"><em>5. Explain the zip function. How many lists can you zip up? What happens when there is a length mismatch between lists?</em></h3>
+<p>Zip is a built in function that returns an iterator object containing tuples, each of which contain a series of typles containing the elements from each iterable object (list). Zip will zip as many list specified and will go the the length of the smallest iterable object (list).</p>
+<h3 id="6-when-you-split-a-string-on-some-character-what-data-type-will-be-returned"><em>6. When you split a string on some character, what data type will be returned?</em></h3>
+<p>str.split(character) returns the character-seperated words as a list</p>
+<pre><code class="language-python"><div>hello = <span class="hljs-string">&#x27;hello&#x27;</span>
+<span class="hljs-built_in">print</span>(hello.split(<span class="hljs-string">&#x27;e&#x27;</span>)) <span class="hljs-comment"># [&#x27;h&#x27;, &#x27;llo&#x27;]</span>
+</div></code></pre>
+<h3 id="7-say-you-are-parsing-a-text-file-with-many-lines-of-data-you-know-that-there-should-always-be-five-columns-in-each-line-explain-how-you-can-verify-the-integrity-of-this-file-give-an-example-of-when-there-could-be-more-columns-than-expected"><em>7. Say you are parsing a text file with many lines of data. You know that there should always be five columns in each line. Explain how you can verify the integrity of this file? Give an example of when there could be more columns than expected?</em></h3>
+<pre><code class="language-python"><div><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filename, <span class="hljs-string">&#x27;r&#x27;</span>) <span class="hljs-keyword">as</span> f:
+    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(f.readline()) == <span class="hljs-number">5</span>: <span class="hljs-comment"># check if there are 5 columns, can specify delimiters</span>
+        <span class="hljs-keyword">continue</span>
+</div></code></pre>
+<h3 id="8-sometimes-before-the-for-loop-code-you-have-initialize-a-variable-to-0-or-an-empty-list-why-do-you-have-to-do-this-give-some-examples-to-explain-how-the-variable-would-be-used-inside-a-loop-to-explain-this"><em>8. Sometimes before the for loop code you have initialize a variable to 0 or an empty list. Why do you have to do this? Give some examples to explain how the variable would be used inside a loop to explain this.</em></h3>
+<p>An empty list can be specified before a for loop and then as you iterate through you can append values. You may need to specify a number to zero so you can create a running total that does not get reset throughout the loop. You can see #6 in my list review to see an example of initializing an empty list.</p>
+<pre><code class="language-python"><div>total = <span class="hljs-number">0</span>
+sales = [<span class="hljs-number">12</span>,<span class="hljs-number">4</span>,<span class="hljs-number">53</span>]
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> sales:
+    total += i
+<span class="hljs-built_in">print</span>(total) <span class="hljs-comment"># 69</span>
+</div></code></pre>
+<h3 id="9-explain-in-detail-the-purpose-of-the-following-lines-using-an-example"><em>9. Explain in detail the purpose of the following lines using an example.</em></h3>
+<p>This line skips over empty lines in a file being read in.</p>
+<pre><code class="language-python"><div><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filename, <span class="hljs-string">&#x27;r&#x27;</span>) <span class="hljs-keyword">as</span> file:
+    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> file:
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> line.strip(): <span class="hljs-comment"># used for skipping empty lines!</span>
+            <span class="hljs-keyword">continue</span>
+</div></code></pre>
+<h3 id="10-explain-in-detail-the-purpose-of-the-following-lines-using-an-example"><em>10. Explain in detail the purpose of the following lines using an example.</em></h3>
+<ul>
+<li>The try block lets you test a block of code for errors.</li>
+<li>The except block lets you handle the error.</li>
+</ul>
+<pre><code class="language-python"><div><span class="hljs-keyword">try</span>:
+    value = <span class="hljs-built_in">float</span>(line)
+<span class="hljs-keyword">except</span>:
+    <span class="hljs-keyword">continue</span>
+</div></code></pre>
+
+        
+        
+    </body>
+    </html>
